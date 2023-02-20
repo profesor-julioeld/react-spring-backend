@@ -19,4 +19,13 @@ public class HolaController {
         respuesta.put("Hora", hora.format(f));
         return respuesta;
     }
+    @RequestMapping(value="otro/hora")
+    public Map getHora2(){
+        Map respuesta=new HashMap();
+        // Muestro sólo hora y minuto, no muestro segundos
+        LocalTime hora = LocalTime.now();
+        DateTimeFormatter f = DateTimeFormatter.ofPattern("h:mm:ss");
+        respuesta.put("Hora", hora.format(f));
+        return respuesta;
+    }
 }
