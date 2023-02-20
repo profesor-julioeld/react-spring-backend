@@ -12,6 +12,7 @@
 	<artifactId>react-spring-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>react-spring-backend</name>
+	<packaging>war</packaging>
 	<description>Backend para integración React-Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
@@ -21,6 +22,13 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope><!-- this line must be present-->
+		</dependency>
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
