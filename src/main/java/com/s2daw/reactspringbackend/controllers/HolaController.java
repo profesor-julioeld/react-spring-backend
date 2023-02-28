@@ -15,7 +15,7 @@ public class HolaController {
         Map respuesta=new HashMap();
         // Muestro sólo hora y minuto, no muestro segundos
         LocalTime hora = LocalTime.now();
-        DateTimeFormatter f = DateTimeFormatter.ofPattern("h:mm:ss");
+        DateTimeFormatter f = DateTimeFormatter.ofPattern("h:mm");
         respuesta.put("Hora", hora.format(f));
         return respuesta;
     }
